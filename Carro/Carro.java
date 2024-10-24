@@ -31,7 +31,7 @@ public class Carro {
     public void imprimir(){
         System.out.println("a marca eh: "+ marca);
         setCor("preto")
-            setModelo("gol");
+        setModelo("gol");
         setMarca("wolksvagem");
         System.out.println("a marca eh: "+getMarca() + "\n e ele eh: "+ getCor()+"\nsua marca é: "+getMarca);
     }
