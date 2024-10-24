@@ -22,9 +22,17 @@ public class Carro {
     public void setCor(String Cor){
         this.marca = cor;
     }
+    public void setModelo(String Modelo){
+        this.modeio = modelo;
+    }
+    public void setMarca(String Marca){
+        this.marca = marca;
+    }
     public void imprimir(){
         System.out.println("a marca eh: "+ marca);
-        setCor("prata");
-        System.out.println("a marca eh: "+getMarca() + " e ele eh: "+ getCor());
+        setCor("preto")
+            setModelo("gol");
+        setMarca("wolksvagem");
+        System.out.println("a marca eh: "+getMarca() + "\n e ele eh: "+ getCor()+"\nsua marca é: "+getMarca);
     }
 }
