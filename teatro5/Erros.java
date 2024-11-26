@@ -119,6 +119,20 @@ public class Erros {
             i++;
         }
     }
+    public static void Caractere_Invalido(String status){
+        int i = 0;
+
+        while(true){
+            if(null == erros[i][0]){
+                erros[i][0] = "ERR00C1  ";
+                erros[i][1] = status;
+                erros[i][2] = Erros.data();
+                System.out.print("\n");
+                break;
+            }
+            i++;
+        }
+    }
     public static void ImprimirErros(){
 
         System.out.print("\n\n            --- HISTÓRICO DE SISTEMA ---\n\n");
