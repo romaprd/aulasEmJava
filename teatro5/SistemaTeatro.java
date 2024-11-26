@@ -12,7 +12,7 @@ public class SistemaTeatro{
         Scanner scanner = new Scanner(System.in);
         boolean rodando = true;
         int op;
-
+        int opcao = 0;
         while (rodando) {
             System.out.print("               ~~~~ BEM VINDO AO TEATRO ROMA ~~~~\n\n");
             System.out.println("\n          ===== SISTEMA DE VENDA DE INGRESSOS =====");
@@ -21,15 +21,14 @@ public class SistemaTeatro{
             System.out.println("3 - Exibir Logs de Vendas");
             System.out.println("4 - Reembolsar Ingressos");
             System.out.println("5 - Sair");
-            System.out.print("INFORME SUA OPÇÃO: ");
-            int opcao = scanner.nextInt();
+            opcao =  Verificacao.verificaop();
 
             switch (opcao) {
                 case 1:
                     do {
                         System.out.println("\nINFORME O PISO QUE VOCÊ DESEJA ANALISAR");
                         System.out.println("1- Piso 1\n2- Piso 2\n3- Piso 3\n4- voltar para o menu principal\ninsira o andar:");
-                        op = scanner.nextInt();
+                        op = Verificacao.verificaAndar();
                         if (op == 1) {
                             Piso1.piso1();
                         } else if (op == 2) {
@@ -50,7 +49,7 @@ public class SistemaTeatro{
                     do{
                         System.out.println("\nINFORME O PISO DA POLTRONA QUE VOCÊ DESEJA COMPRAR!");
                         System.out.println("1- Piso 1\n2- Piso 2\n3- Piso 3\n4- voltar para o menu principal\ninsira o andar:");
-                        op = scanner.nextInt();
+                        op = Verificacao.verificaCompra();
                         if (op == 1) {
                             Piso1.ComprarPiso1();
                         } else if (op == 2) {
@@ -75,7 +74,7 @@ public class SistemaTeatro{
                     do{
                         System.out.println("\nINFORME O PISO DA POLTRONA QUE VOCÊ DESEJA REEMBOLSAR!\n");
                         System.out.println("1- Piso 1\n2- Piso 2\n3- Piso 3\n4- voltar Para o Menu Principal\nEscolha um Opção:");
-                        op = scanner.nextInt();
+                        op = Verificacao.verificaReembolso();
                         if (op == 1) {
                             Piso1.ReembolsarP1();
                         } else if (op == 2) {
