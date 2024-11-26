@@ -30,7 +30,7 @@ public class Piso1 {
 
         do{
             System.out.println("INFORME A LINHA DA POLTRONA QUE VOCÊ DESEJA COMPRAR: ");
-            linha = in.nextInt();
+            linha = Verificacao.verificaLinha();
 
             if (linha > 31){
                 Erros.Linha_invalida("Linha Inválida   ");
@@ -42,7 +42,7 @@ public class Piso1 {
 
         do{
             System.out.println("INFORME O NÚMERO DA POLTRONA QUE VOCÊ DESEJA COMPRAR: ");
-            coluna = in.nextInt();
+            coluna = Verificacao.verificaColuna();
 
             if (coluna > 51){
                 Erros.Poltrona_invalida("Poltrona Inválida   ");
@@ -72,7 +72,7 @@ public class Piso1 {
 
         do{
             System.out.println("INFORME A LINHA DA POLTRONA QUE VOCÊ DESEJA REEMB0LSAR: ");
-            linha = in.nextInt();
+            linha = Verificacao.verificaLinhaR();
 
             if (linha > 31){
                 Erros.Linha_invalida("Linha Inválida   ");
@@ -84,7 +84,7 @@ public class Piso1 {
 
         do{
             System.out.println("INFORME O NÚMERO DA POLTRONA QUE VOCÊ DESEJA REEMBOLSAR: ");
-            coluna = in.nextInt();
+            coluna = Verificacao.verificaColunaR();
 
             if (linha > 51){
                 Erros.Poltrona_invalida("Poltrona Inválida   ");
