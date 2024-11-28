@@ -4,7 +4,7 @@ public class Pagamentos {
     public static String  Menupagamentos(){
 
         int op;
-
+ do{
         System.out.println("  --- METODOS DE PAGAMENTO ---");
         System.out.print("1- Pix\n2- Cartão Debito\n3- Catrão Credito\n 4- Dinheiro\n5- Voltar ao Menu Principal\n");
         System.out.println("INFORME O METODO DE PAGAMENTO: ");
@@ -32,7 +32,14 @@ public class Pagamentos {
             case 5:
                 System.out.print("saindo...\n");
                 SistemaTeatro.menu();
+
+            default: 
+                System.out.print("Metodo de pagamento invalido!\n");
+                Erros.PagamentoInvalido();
+                break;
         }
+ } while(op < 0 || op > 5);
+        
         return "";
     }
 
