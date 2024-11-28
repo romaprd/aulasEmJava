@@ -35,7 +35,7 @@ public class Pagamentos {
 
             default: 
                 System.out.print("Metodo de pagamento invalido!\n");
-                Erros.PagamentoInvalido();
+                Erros.PagamentoInvalido("Metodo de pagamento invalido");
                 break;
         }
  } while(op < 0 || op > 5);
@@ -79,6 +79,7 @@ public class Pagamentos {
 
         }else{
             System.out.print("SENHA INVALIDA! RETIRE O CARTÃO E TENTE NOVAMENTE!\n");
+            Erros.PagementoCreditoInvalido("Pagamento de Cartao de Credito Invalido");
             CartaoCredito();
         }
 
@@ -97,6 +98,7 @@ public class Pagamentos {
 
         }else{
             System.out.print("SENHA INVALIDA! RETIRE O CARTÃO E TENTE NOVAMENTE!\n");
+            Erros.PagamentoDebito.Invalido("Pagamento de Cartao de Debito Inválido");
             CartaoCredito();
         }
     }
@@ -108,6 +110,12 @@ public class Pagamentos {
             System.out.print("\nValor a Pagar:\n R$20,49\n");
             System.out.print("Insira o Valor da Nota que você usara para efetuar o pagamaento: ");
             valor = Verificacao.verificaValor();
+
+            if(valor < 0.0){
+             System.out.print("Valor invalido!\nPara a comprar ser efetuada, pague um valor igual ou acima do determinado!\n");
+                Erros.PagamentoCedulaInvalido("Pagamento por Cedula Invalido");
+            Cedula();
+            }
         }while (valor < 0.0);
         System.out.print("PAGAMENTO EFETUADO COM SUCESSO!\nSEU TROCO É DE: R$"+(valor - 20.49));
 
