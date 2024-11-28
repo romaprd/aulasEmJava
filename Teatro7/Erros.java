@@ -110,7 +110,7 @@ public class Erros {
 
         while(true){
             if(null == erros[i][0]){
-                erros[i][0] = "ERR00P0  ";
+                erros[i][0] = "ERR00P1  ";
                 erros[i][1] = status;
                 erros[i][2] = Erros.data();
                 System.out.print("\n");
@@ -140,6 +140,66 @@ public class Erros {
         while(true){
             if(null == erros[i][0]){
                 erros[i][0] = "ERR00C1  ";
+                erros[i][1] = status;
+                erros[i][2] = Erros.data();
+                System.out.print("\n");
+                break;
+            }
+            i++;
+        }
+    }
+
+    public static void PagamentoPixInvalido(String status){
+        int i = 0;
+
+        while(true){
+            if(null == erros[i][0]){
+                erros[i][0] = "ERR0021X  ";
+                erros[i][1] = status;
+                erros[i][2] = Erros.data();
+                System.out.print("\n");
+                break;
+            }
+            i++;
+        }
+    }
+
+    public static void PagamentoCreditoInvalido(String status){
+        int i = 0;
+
+        while(true){
+            if(null == erros[i][0]){
+                erros[i][0] = "ERR00C1  ";
+                erros[i][1] = status;
+                erros[i][2] = Erros.data();
+                System.out.print("\n");
+                break;
+            }
+            i++;
+        }
+    }
+
+    public static void PagamentoDebitoInvalido(String status){
+        int i = 0;
+
+        while(true){
+            if(null == erros[i][0]){
+                erros[i][0] = "ERR00D1  ";
+                erros[i][1] = status;
+                erros[i][2] = Erros.data();
+                System.out.print("\n");
+                break;
+            }
+            i++;
+        }
+    }
+
+    public static void PagamentoCedulaInvalido(String status){
+        int i = 0;
+
+        while(true){
+            if(null == erros[i][0]){
+                erros[i][0] = "ERR00C31  ";
                 erros[i][1] = status;
                 erros[i][2] = Erros.data();
                 System.out.print("\n");
